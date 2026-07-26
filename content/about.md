@@ -6,6 +6,5 @@ author = "staubichsauger"
 
 # Hello World!
 
-I'm Tim, aka staubichsauger. I have a Bachelors degree in Computer Science and I'm currently on track towards my Masters degree.
-
-Linux (I use Arch by the way - and Debian), Go, and Containers are my main interests. I also play around with Arduino-based projects and music technology.
+I'm Tim, aka staubichsauger. I have a Masters degree in Computer Science and in my free time lead the AV production team at my church.
+Currently, I play around with AI coding a lot, especially in the church and AV production contexts.

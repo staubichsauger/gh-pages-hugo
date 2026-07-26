@@ -1,7 +1,11 @@
 baseurl = "/"
-languageCode = "en-us"
+locale = "en-US"
 theme = "terminal"
-paginate = 5
+pagination.pagerSize = 5
+
+# Required by Terminal's class-based Chroma syntax highlighting.
+[markup.highlight]
+  noClasses = false
 
 [params]
   # dir name of your main content (default is `content/posts`).
@@ -45,12 +49,12 @@ paginate = 5
 
 [languages]
   [languages.en]
-    languageName = "English"
+    label = "English"
     title = "staubichsauger"
     subtitle = "blog posts about random stuff"
     owner = "https://github.com/staubichsauger"
     keywords = "blog tech go golang linux arduino"
-    copyright = "2020 staubichsauger"
+    copyright = "2020–2026 staubichsauger"
     menuMore = "Show more"
     readMore = "Read more"
     readOtherPosts = "Read other posts"

@@ -96,15 +96,38 @@ configuration intact.
 Keys can still be staged and applied manually when the setlist changes or the
 operator needs to deviate from the prepared order.
 
+## Centralized tuning control
+
+SimpleAUHost provides dedicated parameter-level integration with
+[Waves Tune Real-Time](https://www.waves.com/plugins/waves-tune-real-time).
+
+When supported tuning plugins are loaded on tracks, the Perform view brings
+their essential live controls into one place. Operators can manage tuning
+on/off, musical key and scale, tuning strength, the current song, and the
+prepared setlist without opening each plugin interface.
+
+SimpleAUHost maps those controls directly to the relevant Waves Tune Real-Time
+parameters, including bypass, Scale Root, Scale Type, Tune Speed, and Note
+Transition. Selecting a song, applying a staged key, or changing the tuning
+strength updates the recognized plugin instances directly instead of recalling
+generic plugin snapshots.
+
+Support for
+[Simple Live Tune](https://github.com/staubichsauger/simple-live-tune) is also
+built into this centralized workflow. SimpleAUHost maps the same operator
+controls to its bypass, key, scale, retune-speed, and note-transition
+parameters. Simple Live Tune is still in development and has not been released
+yet, so this integration is currently available for development and testing
+rather than as a downloadable end-user plugin.
+
 ## First-class Stream Deck control
 
-I did not want tuning control to depend on workarounds or require operators to
-open plugin interfaces during the show.
-
-SimpleAUHost therefore includes a local control API and a dedicated
-[Bitfocus Companion](https://bitfocus.io/companion) module for Stream Deck
-workflows. It exposes the actual tuning and setlist operations directly,
-including:
+The centralized tuning state is also available through SimpleAUHost's local
+control API and dedicated
+[Bitfocus Companion](https://bitfocus.io/companion) module. This makes Stream
+Deck an optional extension of the Perform workflow: the controls in the app and
+on the control surface operate the same tuning state, setlist, and supported
+plugin instances. Available operations include:
 
 - Tune on, off, and toggle
 - Staging and applying a musical key
@@ -133,3 +156,7 @@ Download the current app and Companion module from the
 [latest release](https://github.com/staubichsauger/simple-au-host/releases/latest),
 or browse the
 [source and documentation](https://github.com/staubichsauger/simple-au-host).
+
+Waves and Waves Tune Real-Time are trademarks of Waves Audio Ltd. SimpleAUHost
+is an independent project and is not affiliated with, sponsored by, or endorsed
+by Waves Audio Ltd.

@@ -24,6 +24,11 @@ SimpleAUHost is a native macOS Audio Unit host designed around prepared live
 shows. It separates the work of configuring a show from the smaller set of
 controls needed to operate it reliably.
 
+![SimpleAUHost Perform view with two tuning tracks, show management, an editable three-song setlist, and centralized key controls](/img/simple-au-host/perform.jpg)
+
+*The Perform view combines tuning strength, show loading, setlist navigation,
+key staging, and apply controls.*
+
 ## Low-latency tuning and broadcast processing together
 
 Live tuning needs low latency. A broadcast or livestream mastering chain can be
@@ -45,6 +50,11 @@ SimpleAUHost solves this with per-track latency classes:
 This means a realtime vocal tuning path and a heavy livestream mastering chain
 can run alongside each other without forcing both tracks to use the same
 latency tradeoff.
+
+![SimpleAUHost latency setup with separate realtime, buffered, and broadcast processing block sizes](/img/simple-au-host/latency-setup.jpg)
+
+*Each processing path gets its own latency and stability tradeoff instead of
+forcing every track to share the same buffer size.*
 
 ## Technical setup by an expert, weekly operation by volunteers
 
